@@ -64,7 +64,7 @@ const AuthModal = () => {
             font-bold
           "
       >
-        <button className="auth-item">
+        <button className="rounded-full px-4 py-2 border border-neutral-500 hover:border-white min-w-[70%] w-[80%] cursor-pointer flex items-center gap-x-3">
           <FcGoogle
             className="
               text-2xl
@@ -73,7 +73,7 @@ const AuthModal = () => {
           />
           <p className="flex-1">Continue With Google</p>
         </button>
-        <button className="auth-item">
+        <button className="rounded-full px-4 py-2 border border-neutral-500 hover:border-white min-w-[70%] w-[80%] cursor-pointer flex items-center gap-x-3">
           <FaFacebook
             className="
               text-2xl
@@ -83,7 +83,7 @@ const AuthModal = () => {
           />
           <p className="flex-1">Continue With Facebook</p>
         </button>
-        <button className="auth-item">
+        <button className="rounded-full px-4 py-2 border border-neutral-500 hover:border-white min-w-[70%] w-[80%] cursor-pointer flex items-center gap-x-3">
           <FaApple
             className="
               text-2xl
@@ -92,7 +92,7 @@ const AuthModal = () => {
           />
           <p className="flex-1">Continue With Apple</p>
         </button>
-        <button className="auth-item">
+        <button className="rounded-full px-4 py-2 border border-neutral-500 hover:border-white min-w-[70%] w-[80%] cursor-pointer flex items-center gap-x-3">
           <p className="flex-1">Continue With Phone Number</p>
         </button>
         <hr className="w-[80%]" />
