@@ -28,6 +28,7 @@ const navigate = useNavigate()
         transition
         pr-4
     "
+    onClick={onClick}
 		>
 			<div
 				className="

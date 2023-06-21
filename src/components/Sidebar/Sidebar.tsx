@@ -1,5 +1,3 @@
-'use client';
-
 import { useMemo } from 'react';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
@@ -7,16 +5,15 @@ import Box from '../Box';
 import SidebarItem from './SidebarItem';
 import Library from './Library';
 import { useLocation } from 'react-router-dom';
-import { Song } from '../../ultis/Type';
 
 interface SidebarProps {
 	children: React.ReactNode;
-	songs: Song[]
+	songs: Track[] | any[]
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
 	children,
-	songs = [1,2,3,4,5]
+	songs
 }) => {
 	const location = useLocation()
 	const pathname = location.pathname

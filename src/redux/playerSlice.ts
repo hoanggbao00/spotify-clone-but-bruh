@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "./store";
 
 const initialState = {
   isPlaying: false,
@@ -26,5 +27,5 @@ export const playerSlice = createSlice({
 export const { togglePlay, toggleMute, setVolume } = playerSlice.actions;
 
 
-export const playerState = (state) => state.player;
+export const playerState = (state:RootState) => state.player;
 export default playerSlice.reducer;

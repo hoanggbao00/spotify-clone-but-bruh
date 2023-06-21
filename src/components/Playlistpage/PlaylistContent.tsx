@@ -1,7 +1,6 @@
 import { FaPlay } from "react-icons/fa";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
-import { HiOutlineClock } from "react-icons/hi";
 import DataTable from "../DataTable";
 
 interface PlaylistContentProps {

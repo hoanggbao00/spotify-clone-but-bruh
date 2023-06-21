@@ -4,14 +4,8 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import MediaItem from '../MediaItem';
 import { useNavigate } from 'react-router-dom';
 
-type Song = {
-	id: string;
-	title: string;
-	author: string;
-};
-
 interface LibraryProps {
-	songs: Song[];
+	songs: Track[];
 }
 
 const Library: React.FC<LibraryProps> = ({ songs }) => {
@@ -48,8 +42,8 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
 				/>
 			</div>
 			<div className="flex flex-col gap-y-2 mt-4 px-3">
-				{songs.map((item: Song,idx:number) => (
-					<MediaItem key={idx} onClick={onClick} data={item} />
+				{songs.map((item: Track) => (
+					<MediaItem key={item.key} onClick={onClick} data={item} />
 				))}
 			</div>
 		</div>

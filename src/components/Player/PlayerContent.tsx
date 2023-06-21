@@ -1,5 +1,4 @@
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
-import { Song } from "../../ultis/Type";
 import MediaItem from "../MediaItem";
 import LikeButton from "../LikeButton";
 import { AiFillStepBackward, AiFillStepForward } from "react-icons/ai";
@@ -10,11 +9,10 @@ import { playerState, toggleMute, togglePlay, setVolume as setVolumeStore } from
 import { useState } from "react";
 
 interface PlayerContentProps {
-  song: Song;
-  songUrl: string;
+  song: Track | any;
 }
 
-const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
+const PlayerContent: React.FC<PlayerContentProps> = ({ song }) => {
   const player = useSelector(playerState)
   const dispatch = useDispatch()
 
@@ -34,7 +32,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
 
   const handleVolume = (e:number) => {
     dispatch(setVolumeStore({volume: e}))
-    setVolume(player.volume)
+    setVolume([player.volume])
   }
 
   return (
@@ -110,7 +108,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
             items-center
           '>
             <span className='text-neutral-400 font-medium text-sm h-full'>0:00</span>
-            <Slider BgTrack="bg-neutral-400/40" height={2} thumbSize={4} label="music"/>
+            <Slider BgTrack="bg-neutral-400/40" height={2} thumbSize={4} label="music" value={[0]}/>
             <span className="text-neutral-400 font-medium text-sm h-full">03:02</span>
           </div>
         </div>
@@ -120,7 +118,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
 
             {isVolumeMuted ?  <HiSpeakerXMark size={32} className="cursor-pointer" /> : <HiSpeakerWave size={32} className="cursor-pointer" />}
             </div>
-            <Slider BgTrack="bg-neutral-400/50" label="volume" value={isVolumeMuted ? [0] : [volume]} onChange={(e) => handleVolume(e)}/>
+            <Slider BgTrack="bg-neutral-400/50" label="volume" value={isVolumeMuted ? [0] : [...volume]} onChange={(e) => handleVolume(e)}/>
           </div>
         </div>
       </div>

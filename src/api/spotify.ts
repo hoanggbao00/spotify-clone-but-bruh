@@ -69,7 +69,7 @@ const SpotifyAPI = {
     }
   },
   getHomeData: async () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(homeData);
       }, 1000);

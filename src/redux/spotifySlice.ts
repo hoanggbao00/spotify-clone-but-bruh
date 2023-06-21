@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "./store";
 
 const initialState = {
   profile: null,
@@ -17,5 +18,5 @@ export const spotifySlice = createSlice({
 export const { setUserProfile } = spotifySlice.actions;
 
 
-export const spotifyState = (state) => state.spotify;
+export const spotifyState = (state:RootState) => state.spotify;
 export default spotifySlice.reducer;

@@ -20,7 +20,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className}) => {
-  const profileSelector = useSelector(spotifyState).profile
+  const profileSelector:any = useSelector(spotifyState).profile
   const dispatch = useDispatch();
   const navigate = useNavigate();
   

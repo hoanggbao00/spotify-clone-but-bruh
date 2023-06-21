@@ -2,11 +2,18 @@ import PlayerContent from './PlayerContent'
 
 const Player = () => {
 
-  const song = {
-    id: 'song',
-    title: 'Peaceful Piano',
-    author: 'hoanggbao'
-  }
+  const data = [
+    {
+      key: '1',
+      title: 'Peaceful Piano',
+      artists: [
+        {
+          id: 'hoanggbao',
+          adamid: 'hoanggbao',
+        },
+      ],
+    },
+  ];
 
   return (
     <div
@@ -20,7 +27,7 @@ const Player = () => {
         px-4
       '
     >
-      <PlayerContent song={song} songUrl='https'/>
+      <PlayerContent song={data}/>
     </div>
   )
 }

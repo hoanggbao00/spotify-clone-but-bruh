@@ -11,7 +11,7 @@ import {
 
 interface DataTableProps {
   columns: DataTableColumn[];
-  data: Track[];
+  data: Track[] | any[];
 }
 
 const DataTable: React.FC<DataTableProps> = ({ columns, data }) => {
