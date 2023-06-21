@@ -9,10 +9,10 @@ const App = () => {
 		<Router>
 			<Layout>
 					<Routes>
-						<Route path="/" exact Component={Home} />
-						<Route path="/search" Component={Search} />
-						<Route path="/playlist/" exact Component={Playlist} />
-						<Route path="/playlist/:key" Component={Playlist} />
+						<Route path="/" element={<Home />} />
+						<Route path="/search" element={<Search/>} />
+						<Route path="/playlist/" element={<Playlist/>} />
+						<Route path="/playlist/:key" element={<Playlist/>} />
 					</Routes>
 			</Layout>
 		</Router>

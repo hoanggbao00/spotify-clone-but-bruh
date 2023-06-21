@@ -4,13 +4,7 @@ import SearchContent from '../../components/Searchpage/SearchContent';
 import SearchInput from '../../components/Searchpage/SearchInput';
 import SpotifyAPI from '../../api/spotify';
 
-interface SearchProps {
-  searchParams: {
-    title: string;
-  };
-}
-
-const Search = ({ searchParams }: SearchProps) => {
+const Search = () => {
   const [value, setValue] = useState('');
   const [data, setData] = useState(null);
   const [isSearching, setIsSearching] = useState(false);
