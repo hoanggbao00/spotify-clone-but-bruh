@@ -45,7 +45,7 @@ const MediaItem: React.FC<MediaItemProps> = ({
           "
         >
           <img 
-            src={(data.images ? data.images.coverart : null )|| '/images/liked.png'}
+            src={(data.images ? data.images.coverart : null )|| './images/liked.png'}
             alt="Library Item"
             className="object-cover"
           />

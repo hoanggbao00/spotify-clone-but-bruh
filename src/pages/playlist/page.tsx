@@ -66,7 +66,7 @@ const Playlist = () => {
               object-cover
               drop-shadow-xl
             "
-              src={(data ? data.images.coverart : "/images/liked.png")}
+              src={(data ? data.images.coverart : "./images/liked.png")}
               alt=""
             />
           </div>

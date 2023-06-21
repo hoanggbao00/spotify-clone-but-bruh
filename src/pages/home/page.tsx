@@ -45,7 +45,7 @@ export default function Home() {
             mt-4
           "
         >
-          <ListItem image="/images/liked.png" name="Liked Songs" href="liked" />
+          <ListItem image="./images/liked.png" name="Liked Songs" href="liked" />
         </div>
       </Header>
       <div className="mt-2 mb-7 px-6 flex flex-col gap-y-3">

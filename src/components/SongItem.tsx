@@ -52,7 +52,7 @@ const SongItem: React.FC<SongItemProps> = ({
         ">
           <img 
             className="object-cover"
-            src={data.image || '/images/liked.png'}
+            src={data.image || './images/liked.png'}
             alt="Image"
           />
       </div>
