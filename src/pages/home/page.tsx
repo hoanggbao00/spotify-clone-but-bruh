@@ -7,7 +7,7 @@ import HomeContent from '../../components/Homepage/HomeContent';
 export default function Home() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    if(data) return;
+    if(data.length !== 0) return;
     SpotifyAPI.getHomeData().then((respose: any) => {
       setData(respose.genres);
     });
