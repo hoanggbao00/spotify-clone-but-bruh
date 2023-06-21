@@ -3,6 +3,7 @@
 A front-end clone project of the Spotify. The project was created by using [Vite](https://vitejs.dev/)
 
 ### Demo
+Deploy with Netlify [https://spotibruh.netlify.app/](https://spotibruh.netlify.app/)
 
 
 ## Table of Contents
