@@ -19,6 +19,8 @@ const Player = () => {
     <div
       className='
         fixed
+        hidden
+        md:flex
         bottom-0
         bg-black
         w-full
