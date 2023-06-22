@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ children, className}) => {
             transition
           "
           >
-            <HiHome className="text-black" size={20} />
+            <HiHome className="text-black" size={20} onClick={() => navigate('/')}/>
           </button>
           <button
             className="
@@ -123,7 +123,7 @@ const Header: React.FC<HeaderProps> = ({ children, className}) => {
             transition
           "
           >
-            <BiSearch className="text-black" size={20} />
+            <BiSearch className="text-black" size={20} onClick={() => navigate('/search')}/>
           </button>
         </div>
         {profileSelector ? (

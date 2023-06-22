@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import modalSlice from "./modalSlice";
 import playerSlice from "./playerSlice";
 import spotifySlice from "./spotifySlice";
+import dataSlice from "./dataSlice";
 
 export const store = configureStore({
   reducer: {
     modal: modalSlice,
     player: playerSlice,
-    spotify: spotifySlice
+    spotify: spotifySlice,
+    data: dataSlice
   }
 })
 

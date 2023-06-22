@@ -32,7 +32,6 @@ const AuthModal = () => {
       dispatch(setUserProfile(data));
       dispatch(handleModalLogin(false));
     }).catch(err => {
-      console.log(err);
       dispatch(
         setUserProfile({
           name: 'hoanggbao',
