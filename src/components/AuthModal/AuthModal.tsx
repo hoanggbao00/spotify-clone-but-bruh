@@ -31,7 +31,7 @@ const AuthModal = () => {
     SpotifyAPI.getProfile(username).then((data) => {
       dispatch(setUserProfile(data));
       dispatch(handleModalLogin(false));
-    }).catch(err => {
+    }).catch(() => {
       dispatch(
         setUserProfile({
           name: 'hoanggbao',
